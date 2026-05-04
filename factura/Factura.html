@@ -1,0 +1,649 @@
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    body {
+      background:rgb(243, 240, 240);
+      padding: 30px;
+    }
+
+    .container {
+      width: 820px;
+      min-height: 980px;
+      margin: auto;
+      display: flex;
+      background: #f7f7f7;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      overflow: hidden;
+    }
+
+    .left-panel {
+      width: 65%;
+      background: white;
+      padding: 0px;
+    }
+
+    .right-panel {
+      width: 32%;
+      background: #373838;
+      color: #ffffff;
+      padding: 48px 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+.brand {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #c7d6d6;
+    padding-left: 22px;
+}
+
+    
+.logo {
+  width: 90px;   /* 🔥 antes 80px */
+  height: 100px;
+  object-fit: contain;
+  display: block;
+}
+   .brand-text h1 {
+  font-size: 35px; /* 🔥 antes 28px */
+  margin-bottom: 3px;
+}
+
+.brand-text p {
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 2.2px;
+}
+
+    .top-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 19px;
+    }
+
+.info-box.center {
+    text-align: right;        /* alinea el texto a la derecha */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;    /* alinea TODO el bloque hacia la derecha */
+}
+
+    .info-box {
+      width: 48%;
+      padding: 20px 20px 20px 50px;
+    }
+
+    .info-box h3 {
+      font-size: 14px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .info-box p {
+      font-size: 12px;
+      color: #6e6e6e;
+      margin-top: 8px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+  padding: 12px 20px;   /* mismo padding para todos */
+  text-align: center;   /* centra horizontal */
+  vertical-align: middle; /* centra vertical */
+  background-color: #c7d6d6;
+}
+
+   th {
+  font-weight: bold;
+  text-align: center;
+}
+
+    td:first-child, th:first-child {
+  text-align: center;
+  width: 30%;
+}
+
+/* descripción */
+td:nth-child(2), th:nth-child(2) {
+  text-align: left;
+  width: 60%;
+}
+
+td:last-child, th:last-child {
+  text-align: left;      /* lo alinea a la izquierda */
+  padding-left: 10px;    /* lo acerca más */
+  padding-right: 25px;   /* evita que se empuje */
+}
+.totals-left {
+  width: 80px;
+  margin-left: auto;
+  margin-top: 24px;
+  margin-bottom: 25px;
+  padding-right: 30px;
+}
+
+.totals-left div {
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  color: #111;
+  padding-left: 10px;
+}
+
+.totals-left .total {
+  font-weight: bold;
+  margin-top: 25px;
+}
+  .terms {
+  padding-left: 40px; /* antes 130px */
+  margin-top: -40px;
+}
+
+.terms .title {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.terms .text {
+  margin-left: -40px;
+  padding: 10px 20px 30px 40px;
+}
+
+
+.payment {
+  margin-top: 35px;
+  padding-left: 40px;
+}
+
+.payment .title {
+  margin-bottom: 25px; /* separa Payment Method de las opciones */
+  font-weight: bold;
+}
+
+.payment-options {
+  display: flex;
+  gap: 14px;           /* separa Cash/Debit, Cheque y Credit card */
+  font-size: 12px;
+  margin-bottom: 30px; /* separa opciones de Cardholder's Name */
+}
+
+.payment p {
+  margin-bottom: 32px; /* separa las líneas */
+}
+
+.payment p:last-child {
+  margin-top: 15px;
+}
+
+    .input-line {
+      border-bottom: 1px solid #aaa;
+      display: inline-block;
+      width: 120px;
+    }
+
+    .input-line.small {
+      width: 55px;
+    }
+
+    .invoice-title {
+      letter-spacing: 9px;
+      margin-bottom: 70px;
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 62px;
+
+    }
+
+    .meta {
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .meta span {
+      font-size: 11px;
+      color: #ccc;
+      display: block;
+    }
+
+    .meta strong {
+      font-size: 12px;
+    }
+
+    .right-data {
+      margin-top: 24px;
+    }
+
+    .row-head {
+      display: grid;
+      justify-items: center;
+      align-items: start;
+      grid-template-columns: 50px 1fr;
+      height: 48px;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .row-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      height: 36px;
+      align-items: center;
+      justify-items: center;
+      grid-template-columns: 1fr 6fr;
+    }
+
+    .totals-right {
+  margin-top: 26px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.totals-right div {
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: #fff;
+  width: 100%;
+  flex-direction: row-reverse;
+}
+
+.totals-right .total {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 24px;
+  padding-right: 0;
+}
+    
+    .title {
+  margin-top: 0px;     /* lo baja para alinearlo con TOTAL */
+    }
+    
+  
+    .signature {
+      margin-top: 270px;
+      text-align: center;
+    }
+
+    .signature-line {
+      border-top: 1px solid white;
+      margin-bottom: 10px;
+    }
+
+
+   /* RESPONSIVE 300px */
+@media (max-width: 360px) {
+
+  body {
+    padding: 8px;
+  }
+
+  .container {
+    width: 300px;
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .brand {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 14px 10px;
+    gap: 8px;
+  }
+
+  .logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .brand-text h1 {
+    font-size: 20px;
+  }
+
+  .brand-text p {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .top-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .info-box,
+  .info-box.center {
+    width: 100%;
+    padding: 14px 18px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  th,
+  td {
+    font-size: 10px;
+    padding: 8px 4px;
+  }
+
+  td:first-child,
+  th:first-child {
+    width: 18%;
+  }
+
+  td:nth-child(2),
+  th:nth-child(2) {
+    width: 52%;
+  }
+
+  td:last-child,
+  th:last-child {
+    width: 30%;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .totals-left {
+    width: 100%;
+    margin: 20px 0 20px;
+    padding: 0 18px;
+  }
+
+  .totals-left div {
+    padding-left: 0;
+    font-size: 12px;
+  }
+
+  .terms {
+    margin-top: 0;
+    padding: 0 18px;
+  }
+
+  .terms .text {
+    margin-left: 0;
+    padding: 8px 0 20px;
+    line-height: 1.4;
+  }
+
+  .payment {
+    margin-top: 22px;
+    padding: 0 18px;
+  }
+
+  .payment .title {
+    margin-bottom: 14px;
+  }
+
+  .payment-options {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .payment p {
+    margin-bottom: 16px;
+  }
+
+  .input-line {
+    width: 80px;
+  }
+
+  .input-line.small {
+    width: 32px;
+  }
+
+  .right-panel {
+    padding: 26px 18px;
+  }
+
+  .invoice-title {
+    font-size: 22px;
+    letter-spacing: 5px;
+    margin-bottom: 35px;
+  }
+
+  .right-data {
+    margin-top: 20px;
+  }
+
+  .row-head,
+  .row-item {
+    grid-template-columns: 1fr 1fr;
+    height: 34px;
+  }
+
+  .totals-right {
+    margin-top: 24px;
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .totals-right div {
+    height: 24px;
+    font-size: 12px;
+    justify-content: flex-end;
+  }
+
+  .totals-right .total {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .signature {
+    margin-top: 60px;
+  }
+}
+
+    
+
+
+  </style>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Factura</title>
+</head>
+<body>
+<a href="../index.html" class="volver">Volver al Portafolio</a>
+
+  <div class="container">
+    <div class="left-panel">
+     <div class="brand">
+  <img class="logo" src="cubo.png" alt="logo">
+  <div class="brand-text">
+    <h1>COMPANY NAME</h1>
+    <p>BRANDING TAGLINE SPACE HERE</p>
+  </div>
+</div>
+
+      <div class="top-info">
+        <div class="info-box">
+          <h3>Additional notes</h3>
+          <p>
+            Ut enim ad minim veniam,<br>
+            quis nostrud exercitation ullamco<br>
+            laboris nisi ut aliquip<br>
+            ex ea commodo consequat.
+          </p>
+        </div>
+
+        <div class="info-box center">
+          <h3>Invoice to:</h3>
+          <strong>JOHN SMITH</strong>
+          <p>
+            123 GREEN LAKE ST.<br>
+            CITY STATE<br>
+            COUNTRY
+          </p>
+        </div>
+      </div>
+
+      <table>
+        <tr>
+          <th>#</th>
+          <th>Product Description</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Item 1</td>
+          <td>$30.50</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Item 2</td>
+          <td>$50.00</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Item 3</td>
+          <td>$70.00</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Item 4</td>
+          <td>$20.00</td>
+        </tr>
+      </table>
+
+      <div class="totals-left">
+        <div>Subtotal</div>
+        <div>Taxes</div>
+        <div>Shipping</div>
+        <div>Discount</div>
+        <div class="total">TOTAL</div>
+      </div>
+
+  <div class="terms">
+  <p class="title">Terms and conditions</p>
+  <p class="text">
+    Lorem ipsum dolor sit amet, consectetur<br>
+    adipiscing sed do eiusmod tempor incididunt<br>
+    ut labore et magna aliqua.
+  </p>
+</div>
+
+    
+      <div class="payment">
+        <p class="title">Payment Method</p>
+
+        <div class="payment-options">
+          <label><input type="radio"> Cash/Debit</label>
+          <label><input type="radio"> Cheque</label>
+          <label><input type="radio"> Credit card</label>
+        </div>
+
+        <p>Cardholder's Name <span class="input-line"></span></p>
+        <p>
+          Card # <span class="input-line"></span>
+          Exp <span class="input-line small"></span>
+          CV <span class="input-line small"></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div>
+        <h2 class="invoice-title">INVOICE</h2>
+
+        <div class="meta">
+          <span>INVOICE DATE</span>
+          <strong>03.12.2019</strong>
+        </div>
+
+        <div class="meta">
+          <span>DUE DATE</span>
+          <strong>03.12.2019</strong>
+        </div>
+
+        <div class="meta">
+          <span>INVOICE #</span>
+          <strong>4526</strong>
+        </div>
+
+        <div class="right-data">
+          <div class="row-head">
+            <span>Qty</span>
+            <span>Total</span>
+          </div>
+
+          <div class="row-item">
+
+            
+            <span>3</span>
+            <span>$91.50</span>
+          </div>
+
+          <div class="row-item">
+            <span>1</span>
+            <span>$50.00</span>
+          </div>
+
+          <div class="row-item">
+            <span>5</span>
+            <span>$350.00</span>
+          </div>
+
+          <div class="row-item">
+            <span>2</span>
+            <span>$40.00</span>
+          </div>
+
+          <div class="totals-right">
+            <div>$531.50</div>
+            <div>$53.15</div>
+            <div>$12.00</div>
+            <div>-$4.37</div>
+            <div class="total">$592.28</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="signature">
+        <div class="signature-line"></div>
+        <p>Signature</p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+
+
+
