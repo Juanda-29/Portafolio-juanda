@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Men's Shoes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f5f5;
+    color:#222;
+}
+
+/* NAVBAR */
+
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    padding:25px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:600;
+}
+
+.menu{
+    display:flex;
+    gap:40px;
+    list-style:none;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+    height:420px;
+    background:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600')
+    center/cover;
+    position:relative;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:52px;
+    font-weight:600;
+}
+
+/* MAIN */
+
+.container{
+    max-width:1300px;
+    margin:auto;
+    padding:60px 30px;
+    display:grid;
+    grid-template-columns:260px 1fr;
+    gap:40px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+}
+
+.sidebar h3{
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.filter-group{
+    margin-bottom:30px;
+}
+
+.filter-group ul{
+    list-style:none;
+}
+
+.filter-group li{
+    margin-bottom:10px;
+    color:#777;
+    font-size:14px;
+}
+
+.colors{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.color{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.c1{background:#000;}
+.c2{background:red;}
+.c3{background:orange;}
+.c4{background:yellow;}
+.c5{background:green;}
+.c6{background:blue;}
+.c7{background:purple;}
+.c8{background:pink;}
+
+/* PRODUCTS */
+
+.products-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:25px;
+}
+
+.products-header h2{
+    font-size:22px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.card-title{
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.price{
+    color:#777;
+    font-size:14px;
+}
+
+/* PAGINATION */
+
+.pagination{
+    margin-top:40px;
+    display:flex;
+    gap:10px;
+}
+
+.pagination a{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:white;
+    border-radius:6px;
+    text-decoration:none;
+    color:#444;
+}
+
+.pagination a.active{
+    background:#111;
+    color:white;
+}
+
+/* FOOTER */
+
+footer{
+    background:white;
+    margin-top:80px;
+    padding:50px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+}
+
+.footer-grid h4{
+    margin-bottom:15px;
+}
+
+.footer-grid ul{
+    list-style:none;
+}
+
+.footer-grid li{
+    margin-bottom:10px;
+    color:#777;
+    font-size:14px;
+}
+
+.copy{
+    text-align:center;
+    margin-top:40px;
+    color:#888;
+    font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.container{
+    grid-template-columns:1fr;
+}
+
+.products{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.footer-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+
+.products{
+    grid-template-columns:1fr;
+}
+
+.menu{
+    display:none;
+}
+
+.footer-grid{
+    grid-template-columns:1fr;
+}
+
+.hero-content h1{
+    font-size:32px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Constructor</div>
+
+    <ul class="menu">
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Children</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Men's Shoes</h1>
+    </div>
+</section>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <div class="filter-group">
+            <h3>Categories</h3>
+            <ul>
+                <li>Lifestyle</li>
+                <li>Running</li>
+                <li>Basketball</li>
+                <li>Training</li>
+            </ul>
+        </div>
+
+        <div class="filter-group">
+            <h3>Colors</h3>
+
+            <div class="colors">
+                <div class="color c1"></div>
+                <div class="color c2"></div>
+                <div class="color c3"></div>
+                <div class="color c4"></div>
+                <div class="color c5"></div>
+                <div class="color c6"></div>
+                <div class="color c7"></div>
+                <div class="color c8"></div>
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <h3>Size</h3>
+
+            <ul>
+                <li>38</li>
+                <li>39</li>
+                <li>40</li>
+                <li>41</li>
+                <li>42</li>
+                <li>43</li>
+            </ul>
+        </div>
+
+    </aside>
+
+    <main>
+
+        <div class="products-header">
+            <h2>Men Shoes & Sneakers</h2>
+            <span>9 Products</span>
+        </div>
+
+        <div class="products">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600">
+                <div class="card-body">
+                    <div class="card-title">Nike Air Max</div>
+                    <div class="price">$180</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600">
+                <div class="card-body">
+                    <div class="card-title">Nike VaporMax</div>
+                    <div class="price">$210</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600">
+                <div class="card-body">
+                    <div class="card-title">Nike Utility</div>
+                    <div class="price">$230</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600">
+                <div class="card-body">
+                    <div class="card-title">Nike Flyknit</div>
+                    <div class="price">$190</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600">
+                <div class="card-body">
+                    <div class="card-title">Nike Free RN</div>
+                    <div class="price">$160</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600">
+                <div class="card-body">
+                    <div class="card-title">Nike React</div>
+                    <div class="price">$175</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+        </div>
+
+    </main>
+
+</div>
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <h4>Services</h4>
+            <ul>
+                <li>Shipping</li>
+                <li>Returns</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Customer Service</h4>
+            <ul>
+                <li>Contact Us</li>
+                <li>Store Policies</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Shopping Guide</h4>
+            <ul>
+                <li>Payments</li>
+                <li>Exchange</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Constructor</h4>
+            <ul>
+                <li>New York</li>
+                <li>United States</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="copy">
+        © 2025 Company. All Rights Reserved.
+    </div>
+
+</footer>
+
+</body>
+</html>
