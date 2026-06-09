@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Sembrando Futuro</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #videos .marco-video {
+            padding: 0;
+            background: #000;
+            line-height: 0;
+        }
+        #videos .marco-video video {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+        #videos .marco-video iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            display: block;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══ NAV ══ -->
+    <nav>
+        <a href="#inicio" class="logo">
+            <div class="logo-icono">🌱</div>
+            <div class="logo-texto">
+                Sembrando Futuro
+                <span>Fundación · Bucaramanga</span>
+            </div>
+        </a>
+        <ul class="nav-enlaces">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#impacto">Nosotros</a></li>
+            <li><a href="#programas">Programas</a></li>
+            <li><a href="#donar">Apoyar</a></li>
+            <li><a href="#voluntario">Contacto</a></li>
+            <li><a href="#donar" class="boton-nav">Donar</a></li>
+        </ul>
+    </nav>
+
+    <!-- ══ HERO ══ -->
+    <section id="inicio">
+        <div class="hero-interno">
+            <div class="hero-texto">
+                <div class="hero-etiqueta">📍 Bucaramanga, Colombia · 5 años de impacto</div>
+                <h1 class="hero-titulo">
+                    <span class="linea-titulo">Transformamos vidas</span>
+                    con <span class="verde">tecnología</span>
+                </h1>
+                <p class="hero-descripcion">
+                    Enseñamos programación gratis a jóvenes de bajos recursos para que construyan
+                    un mejor futuro. Sembrando código, cosechando oportunidades.
+                </p>
+                <div class="hero-botones">
+                    <a href="#donar" class="boton-principal">💚 Donar Ahora</a>
+                    <a href="#voluntario" class="boton-secundario">Ser Voluntario →</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-caja-imagen">
+                    <div class="hero-codigo">
+                        <div><span class="palabra-clave">function</span> cambiarVidas() {</div>
+                        <div class="linea-indentada"><span class="palabra-clave">const</span> jovenes = <span class="numero">250</span>;</div>
+                        <div class="linea-indentada"><span class="palabra-clave">const</span> futuro = <span class="cadena">"brillante"</span>;</div>
+                        <div class="linea-indentada"><span class="palabra-clave">return</span> jovenes * esperanza;</div>
+                        <div>}</div>
+                        <div class="linea-espaciada"><span class="palabra-clave">// 85% empleados en tech 🚀</span></div>
+                    </div>
+                    <div class="hero-insignia">100% Gratuito</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ IMPACTO ══ -->
+    <section id="impacto">
+        <div class="contenedor">
+            <div class="seccion-etiqueta">Nuestro Impacto</div>
+            <h2 class="seccion-titulo blanco">
+                <span class="linea-titulo">Números que hablan</span>
+                por sí solos
+            </h2>
+            <p class="seccion-subtitulo blanco">
+                Cinco años transformando vidas en Santander. Estos no son datos en papel —
+                son personas con empleo, sueños y futuro.
+            </p>
+            <div class="cuadricula-impacto revelar">
+                <div class="tarjeta-impacto">
+                    <div class="impacto-icono">👨‍💻</div>
+                    <div class="impacto-numero">250+</div>
+                    <div class="impacto-etiqueta">Jóvenes formados en programación</div>
+                </div>
+                <div class="tarjeta-impacto">
+                    <div class="impacto-icono">📍</div>
+                    <div class="impacto-numero">18</div>
+                    <div class="impacto-etiqueta">Municipios alcanzados en Santander</div>
+                </div>
+                <div class="tarjeta-impacto">
+                    <div class="impacto-icono">💼</div>
+                    <div class="impacto-numero">85%</div>
+                    <div class="impacto-etiqueta">Empleados en el sector tecnológico</div>
+                </div>
+                <div class="tarjeta-impacto">
+                    <div class="impacto-icono">📅</div>
+                    <div class="impacto-numero">5</div>
+                    <div class="impacto-etiqueta">Años de trayectoria y crecimiento</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ PROGRAMAS ══ -->
+    <section id="programas">
+        <div class="contenedor">
+            <div class="seccion-etiqueta">Nuestros Programas</div>
+            <h2 class="seccion-titulo">
+                <span class="linea-titulo">Formación técnica de</span>
+                alta calidad. Siempre gratis.
+            </h2>
+            <p class="seccion-subtitulo">
+                Nuestros programas preparan a jóvenes para trabajar en el sector digital.
+                Sin costo, sin excusas, con excelencia.
+            </p>
+        </div>
+
+        <div class="carrusel-programas">
+
+            <input type="radio" name="programas" id="pg-1" class="radio-carrusel" checked>
+            <input type="radio" name="programas" id="pg-2" class="radio-carrusel">
+            <input type="radio" name="programas" id="pg-3" class="radio-carrusel">
+
+            <!-- ── Grupo 1 ── -->
+            <div class="grupo-programas grupo-programas-1">
+                <div class="rejilla-programas">
+                    <div class="tarjeta-programa">
+                        <div class="programa-imagen frontal">
+                            <div class="programa-codigo-deco">
+                                <span class="linea-codigo">&lt;div class="futuro"&gt;</span>
+                                <span class="linea-codigo linea-codigo-indentada">&lt;p&gt;Hola mundo&lt;/p&gt;</span>
+                                <span class="linea-codigo">&lt;/div&gt;</span>
+                            </div>
+                            <div class="programa-emoji">🖥️</div>
+                        </div>
+                        <div class="programa-cuerpo">
+                            <span class="programa-etiqueta">12 semanas</span>
+                            <div class="programa-nombre">Frontend Junior</div>
+                            <p class="programa-descripcion">HTML, CSS, JavaScript y React. Construye interfaces modernas y atractivas desde cero, con mentoría personalizada.</p>
+                            <div class="programa-precio">✅ Completamente Gratis</div>
+                            <a href="#voluntario" class="boton-programa">Ver Programa →</a>
+                        </div>
+                    </div>
+                    <div class="tarjeta-programa">
+                        <div class="programa-imagen servidor">
+                            <div class="programa-codigo-deco">
+                                <span class="linea-codigo">SELECT * FROM futuro</span>
+                                <span class="linea-codigo">WHERE esfuerzo = true</span>
+                                <span class="linea-codigo">AND oportunidad IS NOT NULL</span>
+                            </div>
+                            <div class="programa-emoji">⚙️</div>
+                        </div>
+                        <div class="programa-cuerpo">
+                            <span class="programa-etiqueta">14 semanas</span>
+                            <div class="programa-nombre">Backend Junior</div>
+                            <p class="programa-descripcion">Node.js, bases de datos, APIs REST. El motor detrás de los productos digitales que mueven el mundo.</p>
+                            <div class="programa-precio">✅ Completamente Gratis</div>
+                            <a href="#voluntario" class="boton-programa">Ver Programa →</a>
+                        </div>
+                    </div>
+                    <div class="tarjeta-programa">
+                        <div class="programa-imagen diseno">
+                            <div class="programa-codigo-deco">
+                                <span class="linea-codigo">wireframe → prototipo</span>
+                                <span class="linea-codigo">→ testeo → iterar</span>
+                                <span class="linea-codigo">→ diseño final ✓</span>
+                            </div>
+                            <div class="programa-emoji">🎨</div>
+                        </div>
+                        <div class="programa-cuerpo">
+                            <span class="programa-etiqueta">10 semanas</span>
+                            <div class="programa-nombre">Diseño UX</div>
+                            <p class="programa-descripcion">Research, wireframing, Figma y prototipado. Diseña experiencias digitales que conectan con las personas.</p>
+                            <div class="programa-precio">✅ Completamente Gratis</div>
+                            <a href="#voluntario" class="boton-programa">Ver Programa →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-carrusel">
+                    <label for="pg-3" class="flecha" aria-label="Anterior">&#8592;</label>
+                    <div class="puntos-carrusel">
+                        <label for="pg-1" class="punto-carrusel punto-activo" aria-label="Grupo 1"></label>
+                        <label for="pg-2" class="punto-carrusel" aria-label="Grupo 2"></label>
+                        <label for="pg-3" class="punto-carrusel" aria-label="Grupo 3"></label>
+                    </div>
+                    <label for="pg-2" class="flecha" aria-label="Siguiente">&#8594;</label>
+                </div>
+            </div>
+
+            <!-- ── Grupo 2 ── -->
+            <div class="grupo-programas grupo-programas-2">
+                <div class="rejilla-programas">
+                    <div class="tarjeta-programa">
+                        <div class="programa-imagen" style="background:linear-gradient(135deg,#7c3aed,#6d28d9)">
+                            <div class="programa-codigo-deco">
+                                <span class="linea-codigo">git commit -m "futuro"</span>
+                                <span class="linea-codigo">git push origin main</span>
+                                <span class="linea-codigo">✓ Deploy exitoso</span>
+                            </div>
+                            <div class="programa-emoji">📱</div>
+                        </div>
+                        <div class="programa-cuerpo">
+                            <span class="programa-etiqueta">10 semanas</span>
+                            <div class="programa-nombre">Desarrollo Móvil</div>
+                            <p class="programa-descripcion">React Native y Flutter para crear aplicaciones móviles multiplataforma con impacto real en el mercado.</p>
+                            <div class="programa-precio">✅ Completamente Gratis</div>
+                            <a href="#voluntario" class="boton-programa">Ver Programa →</a>
+                        </div>
+                    </div>
+                    <div class="tarjeta-programa">
+                        <div class="programa-imagen" style="background:linear-gradient(135deg,#0e7490,#0891b2)">
+                            <div class="programa-codigo-deco">
+                                <span class="linea-codigo">model.fit(X_train)</span>
+                                <span class="linea-codigo">accuracy: 0.94</span>
+                                <span class="linea-codigo">→ deploying 🚀</span>
+                            </div>
+                            <div class="programa-emoji">🤖</div>
+                        </div>
+                        <div class="programa-cuerpo">
+                            <span class="programa-etiqueta">16 semanas</span>
+                            <div class="programa-nombre">Inteligencia Artificial</div>
+                            <p class="programa-descripcion">Python, machine learning y redes neuronales. Aprende a construir modelos que resuelven problemas reales.</p>
+                            <div class="programa-precio">✅ Completamente Gratis</div>
+                            <a href="#voluntario" class="boton-programa">Ver Programa →</a>
+                        </div>
+                    </div>
+                    <div class="tarjeta-programa">
+                        <div class="programa-imagen" style="background:linear-gradient(135deg,#b45309,#d97706)">
+                            <div class="programa-codigo-deco">
+                                <span class="linea-codigo">SELECT ventas, cliente</span>
+                                <span class="linea-codigo">FROM dashboard</span>
+                                <span class="linea-codigo">GROUP BY mes ✓</span>
+                            </div>
+                            <div class="programa-emoji">📊</div>
+                        </div>
+                        <div class="programa-cuerpo">
+                            <span class="programa-etiqueta">8 semanas</span>
+                            <div class="programa-nombre">Análisis de Datos</div>
+                            <p class="programa-descripcion">Excel avanzado, SQL, Power BI y Python para análisis. Transforma datos en decisiones estratégicas.</p>
+                            <div class="programa-precio">✅ Completamente Gratis</div>
+                            <a href="#voluntario" class="boton-programa">Ver Programa →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-carrusel">
+                    <label for="pg-1" class="flecha" aria-label="Anterior">&#8592;</label>
+                    <div class="puntos-carrusel">
+                        <label for="pg-1" class="punto-carrusel" aria-label="Grupo 1"></label>
+                        <label for="pg-2" class="punto-carrusel punto-activo" aria-label="Grupo 2"></label>
+                        <label for="pg-3" class="punto-carrusel" aria-label="Grupo 3"></label>
+                    </div>
+                    <label for="pg-3" class="flecha" aria-label="Siguiente">&#8594;</label>
+                </div>
+            </div>
+
+            <!-- ── Grupo 3 ── -->
+            <div class="grupo-programas grupo-programas-3">
+                <div class="rejilla-programas">
+                    <div class="tarjeta-programa">
+                        <div class="programa-imagen" style="background:linear-gradient(135deg,#be123c,#e11d48)">
+                            <div class="programa-codigo-deco">
+                                <span class="linea-codigo">$ nmap -sV target</span>
+                                <span class="linea-codigo">CVE-2024-xxxx fixed</span>
+                                <span class="linea-codigo">🔒 Secure ✓</span>
+                            </div>
+                            <div class="programa-emoji">🔐</div>
+                        </div>
+                        <div class="programa-cuerpo">
+                            <span class="programa-etiqueta">12 semanas</span>
+                            <div class="programa-nombre">Ciberseguridad</div>
+                            <p class="programa-descripcion">Fundamentos de seguridad informática, ethical hacking y protección de sistemas para el mundo digital moderno.</p>
+                            <div class="programa-precio">✅ Completamente Gratis</div>
+                            <a href="#voluntario" class="boton-programa">Ver Programa →</a>
+                        </div>
+                    </div>
+                    <div class="tarjeta-programa">
+                        <div class="programa-imagen" style="background:linear-gradient(135deg,#065f46,#059669)">
+                            <div class="programa-codigo-deco">
+                                <span class="linea-codigo">kubectl apply -f app.yml</span>
+                                <span class="linea-codigo">Pods running: 3/3</span>
+                                <span class="linea-codigo">☁️ Cloud ready</span>
+                            </div>
+                            <div class="programa-emoji">☁️</div>
+                        </div>
+                        <div class="programa-cuerpo">
+                            <span class="programa-etiqueta">14 semanas</span>
+                            <div class="programa-nombre">Nube y DevOps</div>
+                            <p class="programa-descripcion">AWS, Docker, Kubernetes y CI/CD. Despliega y escala aplicaciones como lo hacen las grandes empresas tech.</p>
+                            <div class="programa-precio">✅ Completamente Gratis</div>
+                            <a href="#voluntario" class="boton-programa">Ver Programa →</a>
+                        </div>
+                    </div>
+                    <div class="tarjeta-programa">
+                        <div class="programa-imagen" style="background:linear-gradient(135deg,#1e3a5f,#1e40af)">
+                            <div class="programa-codigo-deco">
+                                <span class="linea-codigo">{ product_backlog }</span>
+                                <span class="linea-codigo">Sprint 2 / 4 ✓</span>
+                                <span class="linea-codigo">→ Retrospectiva 📋</span>
+                            </div>
+                            <div class="programa-emoji">🧩</div>
+                        </div>
+                        <div class="programa-cuerpo">
+                            <span class="programa-etiqueta">8 semanas</span>
+                            <div class="programa-nombre">Gestión de Proyectos</div>
+                            <p class="programa-descripcion">Scrum, Agile y gestión de equipos digitales. Lidera proyectos tecnológicos con metodologías ágiles modernas.</p>
+                            <div class="programa-precio">✅ Completamente Gratis</div>
+                            <a href="#voluntario" class="boton-programa">Ver Programa →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-carrusel">
+                    <label for="pg-2" class="flecha" aria-label="Anterior">&#8592;</label>
+                    <div class="puntos-carrusel">
+                        <label for="pg-1" class="punto-carrusel" aria-label="Grupo 1"></label>
+                        <label for="pg-2" class="punto-carrusel" aria-label="Grupo 2"></label>
+                        <label for="pg-3" class="punto-carrusel punto-activo" aria-label="Grupo 3"></label>
+                    </div>
+                    <label for="pg-1" class="flecha" aria-label="Siguiente">&#8594;</label>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══ HISTORIAS DE ÉXITO ══ -->
+    <section id="exito">
+        <div class="contenedor">
+            <div class="seccion-etiqueta">Historias de Éxito</div>
+            <h2 class="seccion-titulo">
+                <span class="linea-titulo">Egresados que hoy</span>
+                construyen el futuro digital
+            </h2>
+            <p class="seccion-subtitulo">
+                Tu apoyo no es una donación que se olvida. Es una historia que se escribe
+                en la vida de alguien real.
+            </p>
+            <div class="cuadricula-exito revelar">
+                <div class="tarjeta-exito">
+                    <div class="exito-avatar avatar-uno">MA</div>
+                    <div class="exito-nombre">María Alejandra Díaz</div>
+                    <div class="exito-empresa">🏢 Desarrolladora Frontend · Platzi</div>
+                    <p class="exito-texto">
+                        "Llegué sin saber nada de código. Hoy trabajo remoto para una empresa con
+                        clientes en toda Latinoamérica. Sembrando Futuro cambió mi historia y la de
+                        mi familia."
+                    </p>
+                </div>
+                <div class="tarjeta-exito">
+                    <div class="exito-avatar avatar-dos">JM</div>
+                    <div class="exito-nombre">Juan Manuel Vargas</div>
+                    <div class="exito-empresa">🏢 Backend Developer · Rappi Tech</div>
+                    <p class="exito-texto">
+                        "En mi municipio no había opciones reales. Gracias al programa de Backend
+                        conseguí mi primer trabajo en Bogotá a los 20 años. Ahora mentoreo a
+                        nuevos estudiantes."
+                    </p>
+                </div>
+                <div class="tarjeta-exito">
+                    <div class="exito-avatar avatar-tres">KR</div>
+                    <div class="exito-nombre">Karen Ruiz Pimiento</div>
+                    <div class="exito-empresa">🏢 UX Designer · Bancolombia</div>
+                    <p class="exito-texto">
+                        "Siempre quise diseñar cosas bonitas pero no tenía cómo estudiar. El
+                        programa de UX me dio las herramientas y la confianza. Hoy diseño productos
+                        que usan millones de colombianos."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ CÓMO DONAR ══ -->
+    <section id="donar">
+        <div class="contenedor">
+            <div class="seccion-etiqueta">Cómo Donar</div>
+            <h2 class="seccion-titulo blanco">
+                <span class="linea-titulo">Tu apoyo ayuda a crear</span>
+                nuevas oportunidades
+            </h2>
+            <p class="seccion-subtitulo blanco">
+                Elige la forma que más te convenga. Cada peso que donas se invierte directamente
+                en la formación de un joven. Publicamos informes financieros trimestrales.
+            </p>
+            <div class="cuadricula-donar revelar">
+                <div class="tarjeta-donar">
+                    <span class="donar-icono">🏦</span>
+                    <div class="donar-metodo">Transferencia Bancaria</div>
+                    <p class="donar-descripcion">
+                        Realiza una transferencia directa a nuestra cuenta. Recibe confirmación
+                        inmediata y certificado de donación para declaración de renta.
+                    </p>
+                    <div class="donar-detalle">
+                        <span class="linea-dato">Bancolombia · Cta Corriente</span>
+                        <span class="linea-dato">NIT: 900.123.456-7</span>
+                        <span class="linea-dato">No. 456-789012-34</span>
+                    </div>
+                </div>
+                <div class="tarjeta-donar destacada">
+                    <span class="donar-icono">📱</span>
+                    <div class="donar-metodo">PSE / Nequi / Daviplata</div>
+                    <p class="donar-descripcion">
+                        Paga en segundos desde tu celular con PSE, Nequi o Daviplata.
+                        El método más rápido para hacer tu donación y ver el impacto.
+                    </p>
+                    <div class="donar-detalle">
+                        <span class="linea-dato">Nequi: 315 000 0000</span>
+                        <span class="linea-dato">PSE: sembrando-futuro.org/donar</span>
+                        <span class="linea-dato">Daviplata: 315 000 0000</span>
+                    </div>
+                </div>
+                <div class="tarjeta-donar">
+                    <span class="donar-icono">🤝</span>
+                    <div class="donar-metodo">Padrinazgo Mensual</div>
+                    <p class="donar-descripcion">
+                        Sé el padrino de un joven durante su proceso de formación.
+                        Con $50.000/mes cubres materiales, conectividad y herramientas de un estudiante.
+                    </p>
+                    <div class="donar-detalle">
+                        <span class="linea-dato">Desde $50.000/mes</span>
+                        <span class="linea-dato">Cancela cuando quieras</span>
+                        <span class="linea-dato">Recibe reporte mensual del impacto</span>
+                    </div>
+                </div>
+            </div>
+            <div class="donar-llamado">
+                <a href="#" class="boton-principal" style="display:inline-block;">
+                    📧 Contáctanos para Empresas y Montos Mayores
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ VOLUNTARIO ══ -->
+    <section id="voluntario">
+        <div class="contenedor">
+            <div class="voluntario-interno">
+                <div class="voluntario-info">
+                    <div class="seccion-etiqueta">Ser Voluntario</div>
+                    <h2 class="seccion-titulo">
+                        <span class="linea-titulo">Forma parte del</span>
+                        cambio
+                    </h2>
+                    <p style="font-size:1rem; color:var(--gris-texto); line-height:1.7; margin-bottom:2rem;">
+                        ¿Trabajas en tecnología y quieres retribuir a la comunidad?
+                        Nuestros voluntarios son la columna vertebral de la fundación.
+                    </p>
+                    <div class="beneficio-elemento">
+                        <div class="beneficio-icono">🎓</div>
+                        <div class="beneficio-texto">
+                            <strong>Mentoría directa</strong>
+                            <span>Acompaña a un estudiante durante su proceso de aprendizaje</span>
+                        </div>
+                    </div>
+                    <div class="beneficio-elemento">
+                        <div class="beneficio-icono">💻</div>
+                        <div class="beneficio-texto">
+                            <strong>Dictar clases o talleres</strong>
+                            <span>Comparte tu experiencia real de la industria</span>
+                        </div>
+                    </div>
+                    <div class="beneficio-elemento">
+                        <div class="beneficio-icono">📋</div>
+                        <div class="beneficio-texto">
+                            <strong>Preparación de entrevistas</strong>
+                            <span>Ayuda a nuestros egresados a conseguir su primer empleo</span>
+                        </div>
+                    </div>
+                    <div class="beneficio-elemento">
+                        <div class="beneficio-icono">🌐</div>
+                        <div class="beneficio-texto">
+                            <strong>Modalidad 100% flexible</strong>
+                            <span>Presencial en Bucaramanga o virtual desde cualquier ciudad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta-formulario">
+                    <div class="formulario-titulo">✍️ Quiero ser voluntario</div>
+                    <div class="formulario-fila">
+                        <div class="formulario-grupo">
+                            <label>Nombre completo</label>
+                            <input type="text" placeholder="Tu nombre">
+                        </div>
+                        <div class="formulario-grupo">
+                            <label>Profesión / Cargo</label>
+                            <input type="text" placeholder="Ej: Desarrollador, Diseñador">
+                        </div>
+                    </div>
+                    <div class="formulario-fila">
+                        <div class="formulario-grupo">
+                            <label>Correo electrónico</label>
+                            <input type="email" placeholder="tu@correo.com">
+                        </div>
+                        <div class="formulario-grupo">
+                            <label>Horas disponibles / semana</label>
+                            <select>
+                                <option value="">Selecciona</option>
+                                <option>1 - 2 horas</option>
+                                <option>3 - 5 horas</option>
+                                <option>6 - 10 horas</option>
+                                <option>Más de 10 horas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formulario-grupo">
+                        <label>Área de interés</label>
+                        <select>
+                            <option value="">¿En qué quieres ayudar?</option>
+                            <option>Desarrollo Frontend</option>
+                            <option>Desarrollo Backend</option>
+                            <option>Diseño UX/UI</option>
+                            <option>Mentoría de carrera</option>
+                            <option>Preparación de entrevistas</option>
+                            <option>Charlas y talleres</option>
+                            <option>Otra área</option>
+                        </select>
+                    </div>
+                    <button class="boton-formulario" type="button">
+                        Enviar solicitud →
+                    </button>
+                    <p style="font-size:0.78rem; color:var(--gris-texto); text-align:center; margin-top:1rem;">
+                        Te responderemos en menos de 48 horas · alianzas@sembrandofuturo.org
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ ALIADOS ══ -->
+    <section id="aliados" style="padding:50px 5%;">
+        <div class="contenedor">
+            <p class="aliados-titulo">Empresas y organizaciones que confían en nosotros</p>
+            <div class="aliados-fila">
+                <div class="aliado">🏛️ Alcaldía de Bucaramanga</div>
+                <div class="aliado">🎓 SENA Santander</div>
+                <div class="aliado">💻 Microsoft LATAM</div>
+                <div class="aliado">🌐 MinTIC Colombia</div>
+                <div class="aliado">🏢 Ruta N</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ VIDEO PASARELA ══ -->
+    <section id="videos">
+        <div class="contenedor">
+            <div class="seccion-etiqueta">Conoce Nuestra Fundación</div>
+            <h2 class="seccion-titulo blanco">
+                <span class="linea-titulo">Mira el impacto</span>
+                en acción
+            </h2>
+            <p class="seccion-subtitulo blanco">
+                Historias reales, aulas reales, vidas transformadas. Así trabaja Sembrando Futuro cada día.
+            </p>
+        </div>
+
+        <div class="carrusel-videos" style="position:relative;">
+
+            <input type="radio" name="videos" id="vd-1" class="radio-carrusel" checked>
+            <input type="radio" name="videos" id="vd-2" class="radio-carrusel">
+            <input type="radio" name="videos" id="vd-3" class="radio-carrusel">
+            <input type="radio" name="videos" id="vd-4" class="radio-carrusel">
+
+            <!-- Video 1 — LOCAL CON AUDIO -->
+            <div class="diapositiva-video diapositiva-video-1">
+                <div class="marco-video">
+                    <video src="sources/video1.mp4" controls></video>
+                </div>
+                <div class="pie-video">
+                    <span class="numero-video">01</span>
+                    <div>
+                        <strong>Historia de Impacto</strong>
+                        <span>Conoce cómo transformamos vidas en Bucaramanga</span>
+                    </div>
+                    <span class="insignia-audio">🔊 Con audio</span>
+                </div>
+                <div class="nav-video">
+                    <label for="vd-4" class="flecha flecha-oscura" aria-label="Anterior">&#8592;</label>
+                    <div class="puntos-video">
+                        <label for="vd-1" class="punto-video punto-video-activo" aria-label="Video 1"></label>
+                        <label for="vd-2" class="punto-video" aria-label="Video 2"></label>
+                        <label for="vd-3" class="punto-video" aria-label="Video 3"></label>
+                        <label for="vd-4" class="punto-video" aria-label="Video 4"></label>
+                    </div>
+                    <label for="vd-2" class="flecha flecha-oscura" aria-label="Siguiente">&#8594;</label>
+                </div>
+            </div>
+
+            <!-- Video 2 — YOUTUBE -->
+            <div class="diapositiva-video diapositiva-video-2">
+                <div class="marco-video">
+                    <iframe
+                        src="https://www.youtube.com/embed/laOHROw__S0?mute=1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="pie-video">
+                    <span class="numero-video">02</span>
+                    <div>
+                        <strong>Un Día en la Fundación</strong>
+                        <span>Así se vive el aprendizaje en nuestras aulas</span>
+                    </div>
+                    <span class="insignia-mudo">🔇 Sin audio</span>
+                </div>
+                <div class="nav-video">
+                    <label for="vd-1" class="flecha flecha-oscura" aria-label="Anterior">&#8592;</label>
+                    <div class="puntos-video">
+                        <label for="vd-1" class="punto-video" aria-label="Video 1"></label>
+                        <label for="vd-2" class="punto-video punto-video-activo" aria-label="Video 2"></label>
+                        <label for="vd-3" class="punto-video" aria-label="Video 3"></label>
+                        <label for="vd-4" class="punto-video" aria-label="Video 4"></label>
+                    </div>
+                    <label for="vd-3" class="flecha flecha-oscura" aria-label="Siguiente">&#8594;</label>
+                </div>
+            </div>
+
+            <!-- Video 3 — YOUTUBE -->
+            <div class="diapositiva-video diapositiva-video-3">
+                <div class="marco-video">
+                    <iframe
+                        src="https://www.youtube.com/embed/UCNic5WYONo?mute=1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="pie-video">
+                    <span class="numero-video">03</span>
+                    <div>
+                        <strong>Egresados Exitosos</strong>
+                        <span>250+ jóvenes que hoy trabajan en tecnología</span>
+                    </div>
+                    <span class="insignia-mudo">🔇 Sin audio</span>
+                </div>
+                <div class="nav-video">
+                    <label for="vd-2" class="flecha flecha-oscura" aria-label="Anterior">&#8592;</label>
+                    <div class="puntos-video">
+                        <label for="vd-1" class="punto-video" aria-label="Video 1"></label>
+                        <label for="vd-2" class="punto-video" aria-label="Video 2"></label>
+                        <label for="vd-3" class="punto-video punto-video-activo" aria-label="Video 3"></label>
+                        <label for="vd-4" class="punto-video" aria-label="Video 4"></label>
+                    </div>
+                    <label for="vd-4" class="flecha flecha-oscura" aria-label="Siguiente">&#8594;</label>
+                </div>
+            </div>
+
+            <!-- Video 4 — LOCAL MUTED -->
+            <div class="diapositiva-video diapositiva-video-4">
+                <div class="marco-video">
+                    <iframe
+                        src="https://www.youtube.com/embed/RYOD_XnMkV4?mute=1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="pie-video">
+                    <span class="numero-video">04</span>
+                    <div>
+                        <strong>Transparencia y Comunidad</strong>
+                        <span>Cómo tu donación genera cambio real y medible</span>
+                    </div>
+                    <span class="insignia-mudo">🔇 Sin audio</span>
+                </div>
+                <div class="nav-video">
+                    <label for="vd-3" class="flecha flecha-oscura" aria-label="Anterior">&#8592;</label>
+                    <div class="puntos-video">
+                        <label for="vd-1" class="punto-video" aria-label="Video 1"></label>
+                        <label for="vd-2" class="punto-video" aria-label="Video 2"></label>
+                        <label for="vd-3" class="punto-video" aria-label="Video 3"></label>
+                        <label for="vd-4" class="punto-video punto-video-activo" aria-label="Video 4"></label>
+                    </div>
+                    <label for="vd-1" class="flecha flecha-oscura" aria-label="Siguiente">&#8594;</label>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <div class="pie-cuadricula">
+            <div class="pie-marca">
+                <a href="#inicio" class="logo" style="display:inline-flex; margin-bottom:0.5rem;">
+                    <div class="logo-icono" style="background:var(--verde);">🌱</div>
+                    <div class="logo-texto">
+                        Sembrando Futuro
+                        <span>Fundación · Colombia</span>
+                    </div>
+                </a>
+                <p>"Sembrando Código, Cosechando Futuro" — Formación tecnológica gratuita para jóvenes de bajos recursos
+                    en Santander.</p>
+                <div class="pie-redes">
+                    <a href="#" class="boton-red" title="Instagram">📷</a>
+                    <a href="#" class="boton-red" title="YouTube">▶️</a>
+                    <a href="#" class="boton-red" title="TikTok">🎵</a>
+                </div>
+            </div>
+            <div class="pie-columna">
+                <h4>Programas</h4>
+                <ul>
+                    <li><a href="#programas">Frontend Junior</a></li>
+                    <li><a href="#programas">Backend Junior</a></li>
+                    <li><a href="#programas">Diseño UX</a></li>
+                    <li><a href="#programas">Mentoría Personal</a></li>
+                    <li><a href="#programas">Taller de Empleabilidad</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h4>Transparencia</h4>
+                <ul>
+                    <li><a href="#boletin">Informe Anual</a></li>
+                    <li><a href="#boletin">Reporte de Impacto</a></li>
+                    <li><a href="#boletin">Auditoría Externa</a></li>
+                    <li><a href="#donar">Cómo Donar</a></li>
+                    <li><a href="#voluntario">Ser Voluntario</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h4>Contacto</h4>
+                <div class="pie-contacto-elemento">
+                    <span>📍</span>
+                    <span>Calle 36 #12-49, Edificio Innovación, Bucaramanga, Santander</span>
+                </div>
+                <div class="pie-contacto-elemento">
+                    <span>💬</span>
+                    <span>+57 315 000 0000</span>
+                </div>
+                <div class="pie-contacto-elemento">
+                    <span>📧</span>
+                    <span>alianzas@sembrandofuturo.org</span>
+                </div>
+                <div class="pie-contacto-elemento">
+                    <span>📷</span>
+                    <span>@SembrandoFuturoBGA</span>
+                </div>
+            </div>
+        </div>
+        <div class="pie-inferior">
+            <span>© 2026 Fundación Sembrando Futuro · NIT 900.123.456-7</span>
+            <span>Diseñado con ❤️ por <a href="#">Juan David Castro &amp; Sebas Morales</a></span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
