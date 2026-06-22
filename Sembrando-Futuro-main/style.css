@@ -9,6 +9,7 @@
     --gris-tarjeta: #F9FAFB;
     --fuente-titulo: 'Poppins', sans-serif;
     --fuente-texto: 'Open Sans', sans-serif;
+    --gris-fondo: #e2e5d7;
 }
 
 * {
@@ -30,15 +31,21 @@ body {
 
 /* ── NAV ── */
 nav {
-    /* margin-top negativo compensa el espacio del nav para que el hero quede pegado arriba */
-    position: relative;
-    background: var(--azul);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(10, 25, 47, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(34, 197, 94, 0.15);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
     height: 70px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -115,16 +122,19 @@ nav {
 /* ── HERO ── */
 #inicio {
     min-height: 100vh;
-    background: var(--azul);
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 0 0%;
+    padding: 0;
     overflow: hidden;
 }
 
 #inicio::before {
     content: '';
-    display: none;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
 }
 
 #inicio::after {
@@ -132,14 +142,26 @@ nav {
     display: none;
 }
 
+.video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
 .hero-interno {
+    position: relative;
+    z-index: 2;
     display: flex;
     align-items: center;
     gap: 5%;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 80px 24px;
 }
 
 .hero-texto {
@@ -242,13 +264,13 @@ nav {
     width: 100%;
     max-width: 480px;
     aspect-ratio: 4/3;
-    background:
-        repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(34, 197, 94, 0.03) 30px, rgba(34, 197, 94, 0.03) 31px),
-        repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(34, 197, 94, 0.03) 30px, rgba(34, 197, 94, 0.03) 31px),
-        linear-gradient(135deg, #194577 0%, #1a3a5c 50%, #0f2d4a 100%);
+    background: rgba(10, 30, 50, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: 16px;
     color: #ffffff;
-    border: 1px solid rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.07);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -299,7 +321,7 @@ nav {
 
 /* ── SECCIÓN COMÚN ── */
 section {
-    padding: 90px 5%;
+    padding: 30px 5%;
 }
 
 .seccion-etiqueta {
@@ -308,7 +330,7 @@ section {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--verde);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0rem;
 }
 
 .seccion-titulo {
@@ -317,7 +339,7 @@ section {
     font-weight: 800;
     color: var(--azul);
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .seccion-titulo.blanco {
@@ -327,9 +349,9 @@ section {
 .seccion-subtitulo {
     font-size: 1rem;
     color: var(--gris-texto);
-    max-width: 600px;
+    max-width: 500px;
     line-height: 1.7;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 .seccion-subtitulo.blanco {
@@ -338,7 +360,7 @@ section {
 
 .contenedor {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 
 /* ── IMPACTO ── */
@@ -358,14 +380,14 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .tarjeta-impacto {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(34, 197, 94, 0.2);
     border-radius: 12px;
-    padding: 2rem 1.5rem;
+    padding: 1rem 1.5rem;
     text-align: center;
     transition: transform 0.2s, background 0.2s;
 }
@@ -377,7 +399,7 @@ section {
 
 .impacto-icono {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .impacto-numero {
@@ -528,7 +550,7 @@ section {
 
 /* ── ÉXITO ── */
 #exito {
-    background: var(--blanco);
+    background: var(--gris-fondo);
 }
 
 .cuadricula-exito {
@@ -701,7 +723,7 @@ section {
 
 /* ── VOLUNTARIO ── */
 #voluntario {
-    background: var(--gris-tarjeta);
+    background: var(--gris-fondo);
 }
 
 .voluntario-interno {
@@ -844,7 +866,7 @@ section {
 
 /* ── ALIADOS ── */
 #aliados {
-    background: var(--blanco);
+    background: var(--gris-fondo);
     border-top: 1px solid var(--gris);
 }
 
@@ -1244,7 +1266,7 @@ footer::before {
    ════════════════════════════════════════════ */
 
 #programas {
-    background: var(--gris-tarjeta);
+    background: var(--gris-fondo);
 }
 
 .carrusel-programas {
