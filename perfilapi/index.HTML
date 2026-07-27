@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.18.1/axios.min.js"></script>
+</head>
+
+<body>
+
+<div class="card">
+
+    <img id="perfil" alt="Foto de perfil">
+
+    <h1>Perfil de Usuario</h1>
+
+    <button id="maps"> Ver ubicación en Google Maps</button>
+
+    <div class="contenedor">
+
+        <div class="seccion">
+            <h2>Información Personal</h2>
+
+            <div class="grid-info">
+                <div class="titulo">Nombre</div>
+                <div id="nombre" class="dato"></div>
+
+                <div class="titulo">Usuario</div>
+                <div id="usuario" class="dato"></div>
+
+                <div class="titulo">Género</div>
+                <div id="genero" class="dato"></div>
+
+                <div class="titulo">Edad</div>
+                <div id="edad" class="dato"></div>
+
+                <div class="titulo">Nacimiento</div>
+                <div id="nacimiento" class="dato"></div>
+            </div>
+        </div>
+
+        <div class="seccion">
+            <h2>Contacto</h2>
+
+            <div class="grid-info">
+                <div class="titulo">Email</div>
+                <div id="email" class="dato"></div>
+
+                <div class="titulo">Teléfono</div>
+                <div id="telefono" class="dato"></div>
+
+                <div class="titulo">Celular</div>
+                <div id="celular" class="dato"></div>
+            </div>
+        </div>
+
+        <div class="seccion">
+            <h2>Ubicación</h2>
+
+            <div class="grid-info">
+                <div class="titulo">País</div>
+                <div id="pais" class="dato"></div>
+
+                <div class="titulo">Estado</div>
+                <div id="estado" class="dato"></div>
+
+                <div class="titulo">Ciudad</div>
+                <div id="ciudad" class="dato"></div>
+
+                <div class="titulo">Dirección</div>
+                <div id="direccion" class="dato"></div>
+
+                <div class="titulo">Código Postal</div>
+                <div id="codigo" class="dato"></div>
+            </div>
+        </div>
+
+        <div class="seccion">
+            <h2>Información Adicional</h2>
+
+            <div class="grid-info">
+                <div class="titulo">Nacionalidad</div>
+                <div id="nacionalidad" class="dato"></div>
+
+                <div class="titulo">Latitud</div>
+                <div id="latitud" class="dato"></div>
+
+                <div class="titulo">Longitud</div>
+                <div id="longitud" class="dato"></div>
+
+                <div class="titulo">Zona Horaria</div>
+                <div id="zona" class="dato"></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", async()=>{
+
+    try{
+
+        let respuesta = await axios.get("https://randomuser.me/api/");
+
+        let datos = respuesta.data.results[0];
+
+
+        document.getElementById("perfil").src = datos.picture.large;
+
+
+        document.getElementById("nombre").textContent =
+        datos.name.first + " " + datos.name.last;
+
+
+        document.getElementById("usuario").textContent =
+        "@" + datos.login.username;
+
+
+        document.getElementById("genero").textContent =
+        datos.gender;
+
+
+        document.getElementById("edad").textContent =
+        datos.dob.age + " años";
+
+
+        document.getElementById("nacimiento").textContent =
+        datos.dob.date.substring(0,10);
+
+
+
+        document.getElementById("email").textContent =
+        datos.email;
+
+
+        document.getElementById("telefono").textContent =
+        datos.phone;
+
+
+        document.getElementById("celular").textContent =
+        datos.cell;
+
+
+
+        document.getElementById("pais").textContent =
+        datos.location.country;
+
+
+        document.getElementById("estado").textContent =
+        datos.location.state;
+
+
+        document.getElementById("ciudad").textContent =
+        datos.location.city;
+
+
+        document.getElementById("direccion").textContent =
+        datos.location.street.number + " " +
+        datos.location.street.name;
+
+
+        document.getElementById("codigo").textContent =
+        datos.location.postcode;
+
+
+
+        document.getElementById("nacionalidad").textContent =
+        datos.nat;
+
+
+        document.getElementById("latitud").textContent =
+        datos.location.coordinates.latitude;
+
+
+        document.getElementById("longitud").textContent =
+        datos.location.coordinates.longitude;
+
+
+        document.getElementById("zona").textContent =
+        datos.location.timezone.description;
+        
+      const maps = document.getElementById("maps");
+
+maps.addEventListener("click", () => {
+
+    const latitud = datos.location.coordinates.latitude;
+    const longitud = datos.location.coordinates.longitude;
+
+    window.open(
+        `https://www.google.com/maps?q=${latitud},${longitud}`,
+        "_blank"
+    );
+
+});
+
+    }catch(error){
+
+        console.error("Error al obtener los datos del usuario:", error);
+
+    }
+
+});
+
+</script>
+
+<style> 
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#ffffff);
+    padding:40px;
+
+}
+
+.card{
+
+    max-width:1400px;
+    margin:auto;
+    background:rgb(122, 216, 119);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 20px 45px rgba(0,0,0,.2);
+
+}
+
+#perfil{
+
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:auto;
+    border:6px solid #00f7ff;
+
+}
+
+h1{
+
+    text-align:center;
+    margin:25px 0;
+    color:#000000;
+
+}
+
+#maps{
+
+    display:block;
+    margin:0 auto 35px;
+    border:none;
+    padding:12px 25px;
+    background:#db20bc;
+    color:white;
+    font-size:15px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+#maps:hover{
+
+    background:#009c74;
+
+}
+
+.contenedor{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+
+}
+
+.seccion{
+
+    background:#b6cca5;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.seccion h2{
+
+    text-align:center;
+    margin-bottom:18px;
+    color:white;
+    background:linear-gradient(90deg,#3e7781);
+    padding:12px;
+    border-radius:8px;
+
+}
+
+.grid-info{
+
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:10px;
+
+}
+
+.titulo{
+
+    background:#1bb6dd;
+    color:white;
+    padding:10px;
+    border-radius:6px;
+    font-weight:bold;
+
+}
+
+.dato{
+
+    background:white;
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #d8d8d8;
+    word-break:break-word;
+
+}
+
+@media(max-width:900px){
+
+    .contenedor{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .grid-info{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+</style>
