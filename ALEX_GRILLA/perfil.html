@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de usuario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Directorio de usuarios</h1>
+
+    <nav class="tabs">
+      <a href="cards.html" class="tab">Todos <span id="contadorTodos"></span></a>
+      <a href="favoritos.html" class="tab">★ Favoritos <span id="contadorFavoritos"></span></a>
+      
+    </nav>
+  </header>
+
+  <main class="perfil-wrap">
+    <button id="volver">← Volver</button>
+
+    <div class="perfil-card">
+      <button id="estrellaPerfil" class="estrella"></button>
+
+      <img id="perfilFoto" alt="Foto de perfil">
+      <h2 id="perfilNombre"></h2>
+      <p id="perfilUsuario" class="usuario"></p>
+
+      <div class="dato">
+        <span class="etiqueta">Correo</span>
+        <span class="valor" id="perfilCorreo"></span>
+      </div>
+
+      <div class="dato">
+        <span class="etiqueta">Teléfono</span>
+        <span class="valor" id="perfilTelefono"></span>
+      </div>
+
+      <div class="dato">
+        <span class="etiqueta">Edad</span>
+        <span class="valor" id="perfilEdad"></span>
+      </div>
+
+      <div class="dato">
+        <span class="etiqueta">Género</span>
+        <span class="valor" id="perfilGenero"></span>
+      </div>
+
+      <div class="dato">
+        <span class="etiqueta">Ubicación</span>
+        <span class="valor" id="perfilUbicacion"></span>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

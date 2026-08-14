@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio de usuarios</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.18.1/axios.min.js"></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>Directorio de usuarios</h1>
+
+    <nav class="tabs">
+      <a href="index.html" class="tab activo">Todos <span id="contadorTodos"></span></a>
+      <a href="favoritos.html" class="tab">★ Favoritos <span id="contadorFavoritos"></span></a>
+    </nav>
+
+    <input type="text" id="buscador" placeholder="Buscar por nombre...">
+  </header>
+
+  <main>
+    <p class="total" id="totalTexto"></p>
+    <div id="contenedorUsuarios" class="grilla"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
